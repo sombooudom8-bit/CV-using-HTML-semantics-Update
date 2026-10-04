@@ -1,0 +1,222 @@
+/* Basic reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --dark-blue: #173c55;
+  --text-dark: #263b4a;
+  --text-gray: #555;
+  --line: #294a5e;
+  --page-bg: #f1f3f7;
+  --white: #fff;
+}
+
+/* Page */
+body {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: var(--page-bg);
+  color: var(--text-dark);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* Main CV container */
+.cv {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  max-width: 850px;
+  min-height: 1100px;
+  margin: 0 auto;
+  background: var(--white);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Sidebar */
+.sidebar {
+  padding: 42px 32px;
+  background: var(--dark-blue);
+  color: var(--white);
+}
+
+.profile-photo {
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.profile-photo img {
+  display: block;
+  width: 96px;
+  height: 130px;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+/* Sidebar sections */
+.sidebar-section {
+  margin-bottom: 30px;
+}
+
+.sidebar-section h2,
+.content-section h2 {
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid currentColor;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.sidebar-section p {
+  margin-bottom: 8px;
+  font-size: 11px;
+}
+
+.sidebar-section a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.sidebar-section ul {
+  padding-left: 15px;
+}
+
+.sidebar-section li {
+  margin-bottom: 5px;
+  font-size: 11px;
+}
+
+.education-item {
+  margin-bottom: 24px;
+}
+
+.education-item h3 {
+  margin: 4px 0;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.education-item p {
+  margin-top: 4px;
+}
+
+/* Main content */
+.content {
+  padding: 62px 48px 40px;
+}
+
+/* Header */
+.cv-header {
+  margin-bottom: 60px;
+}
+
+.cv-header h1 {
+  color: var(--dark-blue);
+  font-size: 31px;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.cv-header h1 span {
+  color: #555;
+}
+
+.cv-header p {
+  margin-top: 10px;
+  color: #555;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.cv-header::after {
+  display: block;
+  width: 52px;
+  height: 4px;
+  margin-top: 10px;
+  background: var(--dark-blue);
+  content: "";
+}
+
+/* Main sections */
+.content-section {
+  margin-bottom: 32px;
+}
+
+.content-section h2 {
+  color: var(--dark-blue);
+  font-size: 14px;
+}
+
+.content-section p {
+  color: var(--text-gray);
+}
+
+.profile p {
+  font-size: 12px;
+}
+
+/* Project timeline */
+.project {
+  position: relative;
+  margin-left: 3px;
+  padding: 0 0 18px 20px;
+  border-left: 2px solid #9baab2;
+}
+
+.project::before {
+  position: absolute;
+  top: 4px;
+  left: -5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--dark-blue);
+  content: "";
+}
+
+.project-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.project h3 {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.project time {
+  flex-shrink: 0;
+  color: #555;
+  font-size: 11px;
+}
+
+.project .role {
+  margin: 2px 0 12px;
+  font-size: 11px;
+}
+
+.project ul {
+  padding-left: 17px;
+}
+
+.project li {
+  margin-bottom: 4px;
+  color: var(--text-gray);
+  font-size: 11px;
+}
+
+/* Reference */
+.reference {
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.reference p {
+  font-size: 12px;
+}
